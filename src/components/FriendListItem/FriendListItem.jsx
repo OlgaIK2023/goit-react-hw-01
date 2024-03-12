@@ -4,9 +4,9 @@ import clsx from "clsx"
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className={css.friend_item}>
+    <li className={css.friendItem}>
       <img src={avatar} alt="Avatar" width="48" />
-      <p>{name}</p>
+      <p className={css.friendName}>{name}</p>
       <p className={clsx(css.green, { [css.red]: !isOnline })}>
         {isOnline ? "Online" : "Offline"}
       </p>
